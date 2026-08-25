@@ -1,0 +1,39 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:email": "vitest run src/tests/Footer.test.jsx src/tests/AdminSubscribers.test.jsx src/tests/Contact.test.jsx",
+    "test:e2e": "npm run dev -- --port 5173 & npx wait-on http://localhost:5173 && npx playwright test",
+    "install:playwright": "npx playwright install"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.6",
+    "jsdom": "^30.0.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.11",
+    "@playwright/test": "^1.47.0",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@tanstack/react-query": "^5.101.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "axios": "^1.19.0",
+    "lucide-react": "^1.31.0",
+    "react-helmet-async": "^3.0.0",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.18.2",
+    "socket.io-client": "^4.8.3",
+    "tailwindcss": "^4.3.3",
+    "zustand": "^5.0.15"
+  }
+}
